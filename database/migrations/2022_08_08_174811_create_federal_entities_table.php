@@ -14,11 +14,12 @@ class CreateFederalEntitiesTable extends Migration
     public function up()
     {
         Schema::create('federal_entities', function (Blueprint $table) {
-            $table->id();
-            $table->integer('key');
+
+            $table->unsignedInteger('key');
             $table->string('name');
+
             $table->timestamps();
-            $table->index(['key']);
+            $table->primary(['key']);
         });
     }
 

@@ -14,17 +14,17 @@ class CreateZipCodesTable extends Migration
     public function up()
     {
         Schema::create('zip_codes', function (Blueprint $table) {
-            $table->id();
+
             $table->string('zip_code');
             $table->string('locality');
-            $table->unsignedBigInteger('municipality_id');
-            $table->unsignedBigInteger('federal_entity_id');
+            $table->unsignedInteger('municipality_key');
+            $table->unsignedInteger('federal_entity_key');
             $table->timestamps();
 
-            $table->foreign('municipality_id')->references('id')->on('municipalities');
-            $table->foreign('federal_entity_id')->references('id')->on('federal_entities');
+            $table->foreign('municipality_key')->references('key')->on('municipalities');
+            $table->foreign('federal_entity_key')->references('key')->on('federal_entities');
 
-            $table->index(['zip_code']);
+            $table->primary(['zip_code']);
         });
     }
 

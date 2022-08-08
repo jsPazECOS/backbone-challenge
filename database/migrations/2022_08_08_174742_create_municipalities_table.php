@@ -14,11 +14,10 @@ class CreateMunicipalitiesTable extends Migration
     public function up()
     {
         Schema::create('municipalities', function (Blueprint $table) {
-            $table->id();
-            $table->integer('key');
+            $table->unsignedInteger('key');
             $table->string('name');
+            $table->primary(['key']);
             $table->timestamps();
-            $table->index(['key']);
         });
     }
 

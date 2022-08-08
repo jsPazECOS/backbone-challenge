@@ -14,14 +14,15 @@ class CreateSettlementsTable extends Migration
     public function up()
     {
         Schema::create('settlements', function (Blueprint $table) {
-            $table->id();
-
             $table->integer('key');
             $table->string('name');
             $table->string('zone_type');
-            $table->unsignedBigInteger('settlement_type_id');
-
+            $table->unsignedInteger('settlement_type_key');
+            $table->string('zip_code');
             $table->timestamps();
+
+            $table->foreign('settlement_type_key')->references('key')->on('settlement_types');
+            $table->foreign('zip_code')->references('zip_code')->on('zip_codes');
         });
     }
 

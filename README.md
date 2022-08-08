@@ -24,10 +24,10 @@ To run and use the project you have to follow these next steps
 - [X] Configure project structure
     - [ ] Http
         - [ ] Controllers
-        - [ ] Requests
-        - [ ] Resources
+        - [X] Requests
+        - [X] Resources
     - [ ] Imports
-    - [ ] Models
+    - [X] Models
     - [ ] Services
       - [ ] JsonResponse
     - [X] Database
@@ -37,6 +37,5 @@ To run and use the project you have to follow these next steps
 - [ ] Features
     - [ ] The application must have an endpoint to get the information of a ZIP Code
     - [ ] The response time must be less than 300ms 
-    - [X] Send an email with the stock quote to the user who requested the quote
 - [ ] Bonus Features
     - [ ] 
