@@ -15,6 +15,12 @@ class CreateSettlementsTable extends Migration
     {
         Schema::create('settlements', function (Blueprint $table) {
             $table->id();
+
+            $table->integer('key');
+            $table->string('name');
+            $table->string('zone_type');
+            $table->unsignedBigInteger('settlement_type_id');
+
             $table->timestamps();
         });
     }

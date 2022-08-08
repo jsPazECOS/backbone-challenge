@@ -15,7 +15,7 @@ class CreateMunicipalitiesTable extends Migration
     {
         Schema::create('municipalities', function (Blueprint $table) {
             $table->id();
-            $table->string('key');
+            $table->integer('key');
             $table->string('name');
             $table->timestamps();
             $table->index(['key']);
