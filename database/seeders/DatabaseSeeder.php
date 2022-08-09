@@ -16,9 +16,9 @@ class DatabaseSeeder extends Seeder
         $this->call([
             FederalEntitySeeder::class,
             MunicipalitySeeder::class,
-            SettlementTypesSeeder::class,
-            ZipCodesSeeder::class,
-            SettlementsSeeder::class,
+            SettlementTypeSeeder::class,
+            ZipCodeSeeder::class,
+            SettlementSeeder::class,
         ]);
     }
 }

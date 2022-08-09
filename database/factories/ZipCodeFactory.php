@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ZipCodesFactory extends Factory
+class ZipCodeFactory extends Factory
 {
     /**
      * Define the model's default state.

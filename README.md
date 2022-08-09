@@ -19,8 +19,6 @@ To run and use the project you have to follow these next steps
 
 ### Features
 
-- [ ] Installed libraries
-    - [ ] Laravel Excel - https://github.com/SpartnerNL/Laravel-Excel
 - [X] Configure project structure
     - [X] Http
         - [X] Controllers
@@ -31,8 +29,6 @@ To run and use the project you have to follow these next steps
       - [X] Factories
       - [X] Migrations
       - [X] Seeders
-- [ ] Features
+- [X] Features
     - [X] The application must have an endpoint to get the information of a ZIP Code
-    - [ ] The response time must be less than 300ms 
-- [ ] Bonus Features
-    - [ ] 
+    - [X] The response time must be less than 300ms 
