@@ -14,4 +14,4 @@ use App\Http\Controllers\ZipCodeAPIController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::apiResource('zip-codes/{zipCode}', ZipCodeAPIController::class)->only(['show']);
+Route::get('zip-codes/{zipCode}', 'ZipCodeAPIController');

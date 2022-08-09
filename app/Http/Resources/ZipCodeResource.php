@@ -4,6 +4,7 @@ namespace App\Http\Resources;
 
 use App\Models\FederalEntity;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Str;
 
 class ZipCodeResource extends JsonResource
 {
@@ -15,11 +16,13 @@ class ZipCodeResource extends JsonResource
      */
     public function toArray($request)
     {
+
         $federalEntity = $this->federalEntity;
         $settlements = $this->settlements;
+
         return [
             'zip_code' => $this->zip_code,
-            'locality' => $this->locality,
+            'locality' => Str::upper($this->locality),
             'federal_entity' => new FederalEntityResource($federalEntity),
             'settlements' => SettlementsResource::collection($settlements),
             'municipality' => new MunicipalityResource($this->municipality)

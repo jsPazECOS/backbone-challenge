@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Settlements;
+use App\Models\Settlement;
 use Illuminate\Database\Seeder;
 
 class SettlementsSeeder extends Seeder
@@ -1532,7 +1532,7 @@ class SettlementsSeeder extends Seeder
             ['key' => '2527', 'name' => 'Santa Cecilia Tepetlapa', 'zone_type' => 'Urbano', 'settlement_type_key' => '28', 'zip_code' => '16880'],
         ];
 
-        Settlements::factory()
+        Settlement::factory()
             ->createMany($settlements);
     }
 }

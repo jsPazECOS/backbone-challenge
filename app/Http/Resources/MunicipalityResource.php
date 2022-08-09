@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Str;
 
 class MunicipalityResource extends JsonResource
 {
@@ -16,7 +17,7 @@ class MunicipalityResource extends JsonResource
     {
         return [
             'key' => $this->key,
-            'name' => $this->name
+            'name' => Str::upper($this->name)
         ];
     }
 }

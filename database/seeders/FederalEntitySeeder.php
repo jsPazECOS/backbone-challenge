@@ -17,7 +17,7 @@ class FederalEntitySeeder extends Seeder
         FederalEntity::factory()
             ->create([
                 'key' => '09',
-                'name' => 'Ciudad de México'
+                'name' => 'Ciudad de Mexico'
             ]);
     }
 }

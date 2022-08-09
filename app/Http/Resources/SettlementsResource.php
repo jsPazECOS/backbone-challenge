@@ -3,6 +3,7 @@
 namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Str;
 
 class SettlementsResource extends JsonResource
 {
@@ -14,12 +15,14 @@ class SettlementsResource extends JsonResource
      */
     public function toArray($request)
     {
+        $type = $this->settlementType;
+
         return [
             'key' => $this->key,
-            'name' => $this->name,
-            'zone_type' => $this->zone_type,
+            'name' => Str::upper($this->name),
+            'zone_type' => Str::upper($this->zone_type),
             'settlement_type' => [
-                'name' => $this->settlementType->name
+                'name' => $type->name
             ],
         ];
     }

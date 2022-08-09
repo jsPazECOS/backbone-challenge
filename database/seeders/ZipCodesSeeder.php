@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\ZipCodes;
+use App\Models\ZipCode;
 use Illuminate\Database\Seeder;
 
 class ZipCodesSeeder extends Seeder
@@ -1121,7 +1121,7 @@ class ZipCodesSeeder extends Seeder
 
         ];
 
-        ZipCodes::factory()
+        ZipCode::factory()
             ->createMany($zipCodes);
     }
 }

@@ -19,7 +19,7 @@ class Municipality extends Model
 
     public function zipCodes() : HasMany
     {
-        return $this->hasMany(ZipCodes::class);
+        return $this->hasMany(ZipCode::class);
     }
 
 }

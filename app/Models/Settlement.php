@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Settlements extends Model
+class Settlement extends Model
 {
     use HasFactory;
 
@@ -19,7 +19,7 @@ class Settlements extends Model
 
     public function settlementType(): BelongsTo
     {
-        return $this->belongsTo(SettlementTypes::class);
+        return $this->belongsTo(SettlementType::class, 'settlement_type_key', 'key');
     }
 
 

@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\SettlementTypes;
+use App\Models\SettlementType;
 use Illuminate\Database\Seeder;
 
 class SettlementTypesSeeder extends Seeder
@@ -22,7 +22,7 @@ class SettlementTypesSeeder extends Seeder
             ['key' => '04', 'name' => 'Campamento'],
             ['key' => '01', 'name' => 'Aeropuerto']
         ];
-        SettlementTypes::factory()
+        SettlementType::factory()
             ->createMany($types);
     }
 }

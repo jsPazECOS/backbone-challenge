@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class SettlementTypes extends Model
+class SettlementType extends Model
 {
     use HasFactory;
 
@@ -16,7 +16,7 @@ class SettlementTypes extends Model
 
     public function settlements(): HasMany
     {
-        return $this->hasMany(Settlements::class);
+        return $this->hasMany(Settlement::class);
     }
 }
 

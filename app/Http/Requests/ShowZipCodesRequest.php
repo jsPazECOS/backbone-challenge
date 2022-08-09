@@ -2,10 +2,9 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class ShowZipCodesRequest extends FormRequest
+class ShowZipCodesRequest extends Request
 {
 
     public function validationData()
