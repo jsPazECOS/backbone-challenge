@@ -7,6 +7,7 @@ To run and use the project you have to follow these next steps
 - Run ``` composer install ``` to install dependencies.
 - Copy the ``.env.sample`` file into ``.env`` and modify its content to match your current settings.
 - Run `` php artisan migrate`` and `` php artisan db:seed`` 
+- Run `` php artisan cache:zip-codes`` 
 - Run ``php artisan serve``
 - Go to http://127.0.0.1:8000/api/zip-codes/{ZIPCode}
 
@@ -20,6 +21,7 @@ To run and use the project you have to follow these next steps
 ### Features
 
 - [X] Configure project structure
+    - [X] Commands
     - [X] Http
         - [X] Controllers
         - [X] Requests
@@ -32,3 +34,5 @@ To run and use the project you have to follow these next steps
 - [X] Features
     - [X] The application must have an endpoint to get the information of a ZIP Code
     - [X] The response time must be less than 300ms 
+- [X] Extra Features
+    - [X] Command to cache Zip Code Information
